@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LÂLE in der IKB e.V. – Beratungsstelle</title>
+  <meta name="description" content="LÂLE Beratungsstelle in der IKB e.V. – Unsere Website befindet sich im Aufbau.">
+  <style>
+    @font-face {
+      font-family: 'Public Sans';
+      src: url('fonts/PublicSans-VariableFont_wght.woff2') format('woff2-variations');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --crimson: #b01040;
+      --crimson-hover: #8c0c33;
+      --cream: #fdf8f4;
+      --cream-dark: #ece4db;
+      --text: #1e1816;
+      --text-secondary: #433a35;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: 'Public Sans', sans-serif;
+      background-color: var(--cream);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1.65;
+      font-size: 1rem;
+    }
+
+    .top-bar {
+      width: 100%;
+      height: 5px;
+      background: var(--crimson);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 640px;
+      padding: 3rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      width: 180px;
+      max-width: 55%;
+      margin-bottom: 2rem;
+    }
+
+    .logo img {
+      width: 100%;
+      height: auto;
+    }
+
+    .contact-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 2rem 2rem 1.75rem;
+      width: 100%;
+      box-shadow:
+        0 1px 3px rgba(30, 24, 22, 0.05),
+        0 8px 24px rgba(30, 24, 22, 0.07);
+    }
+
+    .contact-card h1 {
+      font-family: 'Public Sans', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+
+    .contact-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--crimson);
+      margin-bottom: 0.35rem;
+    }
+
+    .contact-detail {
+      font-size: 1rem;
+      color: var(--text-secondary);
+    }
+
+    .contact-detail a {
+      color: var(--crimson);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+      transition: color 0.2s ease;
+    }
+
+    .contact-detail a:hover,
+    .contact-detail a:focus {
+      color: var(--crimson-hover);
+    }
+
+    .contact-detail a:focus-visible {
+      outline: 2px solid var(--crimson);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    .hours-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .hours-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.35rem 0;
+      font-size: 1rem;
+      color: var(--text-secondary);
+    }
+
+    .hours-list li + li {
+      border-top: 1px solid var(--cream-dark);
+    }
+
+    .day {
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    address {
+      font-style: normal;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .info-note {
+      margin-top: 2.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      max-width: 420px;
+      line-height: 1.6;
+    }
+
+    footer {
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      opacity: 0.5;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 2rem 1.25rem;
+      }
+
+      .contact-card {
+        padding: 1.5rem;
+      }
+
+      .logo {
+        width: 140px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
+    @media print {
+      .top-bar { display: none; }
+      .contact-card { box-shadow: none; border: 1px solid #ccc; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar" aria-hidden="true"></div>
+
+  <main class="container">
+    <div class="logo">
+      <img src="LALE_Logo_neu.png" alt="LÂLE in der IKB e.V. – Logo">
+    </div>
+
+    <div class="contact-card">
+      <h1>Kontakt</h1>
+
+      <div class="contact-section">
+        <p class="contact-label">Telefonische Beratungszeiten</p>
+        <ul class="hours-list">
+          <li>
+            <span class="day">Dienstag</span>
+            <span>10:00 – 13:00 Uhr</span>
+          </li>
+          <li>
+            <span class="day">Mittwoch</span>
+            <span>14:00 – 17:00 Uhr</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contact-section">
+        <p class="contact-label">Adresse</p>
+        <address>
+          LÂLE in der IKB e.V.<br>
+          Brahmsallee 35<br>
+          20144 Hamburg
+        </address>
+      </div>
+
+      <div class="contact-section">
+        <p class="contact-label">Telefon</p>
+        <p class="contact-detail">
+          <a href="tel:+4940573093020">040 - 57 30 93 020</a>
+        </p>
+      </div>
+
+      <div class="contact-section">
+        <p class="contact-label">E-Mail</p>
+        <p class="contact-detail">
+          <a href="mailto:lale@ikbev.de">lale@ikbev.de</a>
+        </p>
+      </div>
+    </div>
+
+    <p class="info-note">
+      Wir arbeiten an unserem neuen Internetauftritt. In der Zwischenzeit erreichen Sie uns wie gewohnt persönlich.
+    </p>
+  </main>
+
+  <footer>
+    © 2026 LÂLE in der IKB e.V.
+  </footer>
+</body>
+</html>
